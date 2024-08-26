@@ -11,16 +11,6 @@ const prompt = promptSync();
 
 export async function createKeypairs() {
 
-  if (action === 'u') {
-    wallets = readKeypairs();
-    wallets.forEach((wallet, index) => {
-      console.log(`Read Wallet ${index + 1} Public Key: ${wallet.publicKey.toString()}`);
-    });
-  } else {
-    console.log('Invalid option. Please enter "c" for create or "u" for use existing.');
-    return;
-  }
-
 }
 
 export function loadKeypairs(): Keypair[] {
