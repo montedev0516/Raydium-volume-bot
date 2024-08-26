@@ -7,9 +7,6 @@ const prompt = promptSync();
 
 
 // Ensure the keypairs directory exists
-if (!fs.existsSync(keypairsDir)) {
-  fs.mkdirSync(keypairsDir, { recursive: true });
-}
 
 function generateWallets(numOfWallets: number): Keypair[] {
   let wallets: Keypair[] = [];
