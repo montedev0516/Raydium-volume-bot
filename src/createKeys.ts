@@ -10,9 +10,6 @@ const prompt = promptSync();
 
 
 export async function createKeypairs() {
-  console.log('WARNING: If you create new ones, ensure you don\'t have SOL, OR ELSE IT WILL BE GONE.');
-  const action = prompt('Do you want to (c)reate new wallets or (u)se existing ones? (c/u): ');
-  let wallets: Keypair[] = [];
 
   if (action === 'c') {
     const numOfWallets = 5; // Hardcode 5 buyer keypairs here.
