@@ -8,10 +8,6 @@ const prompt = promptSync();
 
 // Ensure the keypairs directory exists
 
-function saveKeypairToFile(keypair: Keypair, index: number) {
-  const keypairPath = path.join(keypairsDir, `keypair${index + 1}.json`);
-  fs.writeFileSync(keypairPath, JSON.stringify(Array.from(keypair.secretKey)));
-}
 
 function readKeypairs(): Keypair[] {
   const files = fs.readdirSync(keypairsDir);
