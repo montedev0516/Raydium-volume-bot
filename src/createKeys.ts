@@ -12,11 +12,6 @@ const prompt = promptSync();
 function updatePoolInfo(wallets: Keypair[]) {
   let poolInfo: IPoolInfo = {}; // Use the defined type here
 
-  // Check if poolInfo.json exists and read its content
-  if (fs.existsSync(keyInfoPath)) {
-    const data = fs.readFileSync(keyInfoPath, 'utf8');
-    poolInfo = JSON.parse(data);
-  }
 
   // Update wallet-related information
   poolInfo.numOfWallets = wallets.length;
