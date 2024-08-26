@@ -17,10 +17,6 @@ export function loadKeypairs(): Keypair[] {
   // Define a regular expression to match filenames like 'keypair1.json', 'keypair2.json', etc.
 
   return fs.readdirSync(keypairsDir)
-    .map(file => {
-      const filePath = path.join(keypairsDir, file);
-      const secretKeyString = fs.readFileSync(filePath, { encoding: 'utf8' });
-      const secretKey = Uint8Array.from(JSON.parse(secretKeyString));
       return Keypair.fromSecretKey(secretKey);
     });
 }
