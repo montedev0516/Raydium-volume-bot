@@ -6,11 +6,6 @@ import path from 'path';
 const prompt = promptSync();
 
 
-interface IPoolInfo {
-  [key: string]: any;
-  numOfWallets?: number;
-}
-
 // Ensure the keypairs directory exists
 if (!fs.existsSync(keypairsDir)) {
   fs.mkdirSync(keypairsDir, { recursive: true });
