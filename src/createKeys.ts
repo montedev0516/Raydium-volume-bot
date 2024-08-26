@@ -9,15 +9,6 @@ const prompt = promptSync();
 // Ensure the keypairs directory exists
 
 
-function updatePoolInfo(wallets: Keypair[]) {
-  let poolInfo: IPoolInfo = {}; // Use the defined type here
-
-
-
-  // Write updated data back to poolInfo.json
-  fs.writeFileSync(keyInfoPath, JSON.stringify(poolInfo, null, 2));
-}
-
 export async function createKeypairs() {
   console.log('WARNING: If you create new ones, ensure you don\'t have SOL, OR ELSE IT WILL BE GONE.');
   const action = prompt('Do you want to (c)reate new wallets or (u)se existing ones? (c/u): ');
