@@ -21,8 +21,6 @@ export async function createKeypairs() {
     return;
   }
 
-  updatePoolInfo(wallets);
-  console.log(`${wallets.length} wallets have been processed.`);
 }
 
 export function loadKeypairs(): Keypair[] {
