@@ -5,7 +5,6 @@ import path from 'path';
 
 const prompt = promptSync();
 
-const keypairsDir = path.join(__dirname, 'keypairs');
 const keyInfoPath = path.join(__dirname, 'keyInfo.json');
 
 interface IPoolInfo {
