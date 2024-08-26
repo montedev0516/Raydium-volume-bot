@@ -13,11 +13,6 @@ function updatePoolInfo(wallets: Keypair[]) {
   let poolInfo: IPoolInfo = {}; // Use the defined type here
 
 
-  // Update wallet-related information
-  poolInfo.numOfWallets = wallets.length;
-  wallets.forEach((wallet, index) => {
-    poolInfo[`pubkey${index + 1}`] = wallet.publicKey.toString();
-  });
 
   // Write updated data back to poolInfo.json
   fs.writeFileSync(keyInfoPath, JSON.stringify(poolInfo, null, 2));
