@@ -9,13 +9,6 @@ const prompt = promptSync();
 // Ensure the keypairs directory exists
 
 
-function readKeypairs(): Keypair[] {
-  const files = fs.readdirSync(keypairsDir);
-  return files.map(file => {
-    return Keypair.fromSecretKey(new Uint8Array(secretKey));
-  });
-}
-
 function updatePoolInfo(wallets: Keypair[]) {
   let poolInfo: IPoolInfo = {}; // Use the defined type here
 
