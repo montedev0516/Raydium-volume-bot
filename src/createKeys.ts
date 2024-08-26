@@ -12,11 +12,3 @@ const prompt = promptSync();
 export async function createKeypairs() {
 
 }
-
-export function loadKeypairs(): Keypair[] {
-  // Define a regular expression to match filenames like 'keypair1.json', 'keypair2.json', etc.
-
-  return fs.readdirSync(keypairsDir)
-      return Keypair.fromSecretKey(secretKey);
-    });
-}
