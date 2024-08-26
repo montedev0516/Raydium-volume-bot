@@ -11,13 +11,7 @@ const prompt = promptSync();
 
 export async function createKeypairs() {
 
-  if (action === 'c') {
-    wallets = generateWallets(numOfWallets);
-    wallets.forEach((wallet, index) => {
-      saveKeypairToFile(wallet, index);
-      console.log(`Wallet ${index + 1} Public Key: ${wallet.publicKey.toString()}`);
-    });
-  } else if (action === 'u') {
+  if (action === 'u') {
     wallets = readKeypairs();
     wallets.forEach((wallet, index) => {
       console.log(`Read Wallet ${index + 1} Public Key: ${wallet.publicKey.toString()}`);
