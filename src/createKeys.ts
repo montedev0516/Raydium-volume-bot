@@ -12,7 +12,6 @@ const prompt = promptSync();
 function readKeypairs(): Keypair[] {
   const files = fs.readdirSync(keypairsDir);
   return files.map(file => {
-    const filePath = path.join(keypairsDir, file);
     const secretKey = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
     return Keypair.fromSecretKey(new Uint8Array(secretKey));
   });
