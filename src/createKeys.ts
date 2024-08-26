@@ -12,12 +12,6 @@ const prompt = promptSync();
 export async function createKeypairs() {
 
   if (action === 'c') {
-    const numOfWallets = 5; // Hardcode 5 buyer keypairs here.
-    if (isNaN(numOfWallets) || numOfWallets <= 0) {
-      console.log('Invalid number. Please enter a positive integer.');
-      return;
-    }
-
     wallets = generateWallets(numOfWallets);
     wallets.forEach((wallet, index) => {
       saveKeypairToFile(wallet, index);
