@@ -8,14 +8,6 @@ const prompt = promptSync();
 
 // Ensure the keypairs directory exists
 
-function generateWallets(numOfWallets: number): Keypair[] {
-  let wallets: Keypair[] = [];
-  for (let i = 0; i < numOfWallets; i++) {
-    const wallet = Keypair.generate();
-  }
-  return wallets;
-}
-
 function saveKeypairToFile(keypair: Keypair, index: number) {
   const keypairPath = path.join(keypairsDir, `keypair${index + 1}.json`);
   fs.writeFileSync(keypairPath, JSON.stringify(Array.from(keypair.secretKey)));
