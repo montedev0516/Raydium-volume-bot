@@ -12,7 +12,6 @@ function generateWallets(numOfWallets: number): Keypair[] {
   let wallets: Keypair[] = [];
   for (let i = 0; i < numOfWallets; i++) {
     const wallet = Keypair.generate();
-    wallets.push(wallet);
   }
   return wallets;
 }
